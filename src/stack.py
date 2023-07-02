@@ -13,11 +13,9 @@ class Node:
 
 class Stack:
     """Класс для стека"""
-    cur_stack = []
-
-    def __init__(self, name):
+    def __init__(self):
         """Конструктор класса Stack"""
-        self.name = name
+        self.cur_stack = []
 
     def push(self, data):
         """
