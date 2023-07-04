@@ -1,21 +1,21 @@
 class Node:
     """Класс для узла стека"""
 
-    def __init__(self, data, next_node):
+    def __init__(self, data):
         """
         Конструктор класса Node
 
         :param data: данные, которые будут храниться в узле
         """
         self.data = data
-        self.next_node = next_node
+        self.next_node = None
 
 
 class Stack:
     """Класс для стека"""
     def __init__(self):
         """Конструктор класса Stack"""
-        self.cur_stack = []
+        self.top = None
 
     def push(self, data):
         """
@@ -23,7 +23,9 @@ class Stack:
 
         :param data: данные, которые будут добавлены на вершину стека
         """
-        self.cur_stack.append(data)
+        new_node = Node(data)
+        new_node.next_node = self.top
+        self.top = new_node
 
     def pop(self):
         """
