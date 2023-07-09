@@ -8,6 +8,18 @@ class TestStack(unittest.TestCase):
         test1 = Stack
         self.assertTrue(test1)
 
+    def test_pop(self):
+        stack = Stack()
+        stack.push('data1')
+        data = stack.pop()
+        self.assertTrue(data, 'data1')
+
+    def test_pop_2(self):
+        stack = Stack()
+        stack.push('data1')
+        stack.pop()
+        self.assertIsNone(stack.top)
+
 
 if __name__ == '__main__':
     unittest.main()
