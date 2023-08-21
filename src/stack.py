@@ -18,7 +18,7 @@ class Stack:
         self.top = None
 
     def __str__(self):
-        return self.top
+        return self.top.data
 
     def push(self, data):
         """
