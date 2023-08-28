@@ -3,11 +3,21 @@ import unittest
 from src.queue import *
 
 
-class TestStack(unittest.TestCase):
+class TestQueue(unittest.TestCase):
     def test_queue(self):
-        test1 = Queue
-        self.assertTrue(test1)
+        test = Queue()
+        self.assertTrue(test)
 
     def test_str(self):
-        test = Queue
-        self.assertTrue(str(test), "")
+        test = Queue()
+        self.assertEqual(str(test), "")
+
+    def test_enqueue(self):
+        test = Queue()
+        test.enqueue(24)
+        test.enqueue(25)
+        self.assertEqual(test.dequeue(), 24)
+
+
+if __name__ == '__main__':
+    unittest.main()
