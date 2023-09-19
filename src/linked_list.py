@@ -1,6 +1,8 @@
 class Node:
     """Класс для узла односвязного списка"""
-    pass
+    def __init__(self, data):
+        self.data = data
+        self.next_node = None
 
 
 class LinkedList:
