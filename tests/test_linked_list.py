@@ -16,6 +16,18 @@ class TestLinkedList(unittest.TestCase):
             test.insert_beginning(n)
         self.assertEqual(test.head.data, 4)
 
+    def test_attribute(self):
+        test = LinkedList()
+        test.insert_beginning(1)
+        test.insert_at_end(1)
+        self.assertIsNotNone(test.head)
+
+    def test_attribute_2(self):
+        test = LinkedList()
+        test.insert_beginning(1)
+        test.insert_at_end(1)
+        self.assertIsInstance(test, LinkedList)
+
 
 if __name__ == '__main__':
     unittest.main()
