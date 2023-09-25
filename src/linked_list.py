@@ -52,3 +52,15 @@ class LinkedList:
             data_list.append(cursor.data)
             cursor = cursor.next_node
         return data_list
+
+    def get_data_by_id(self, input_id):
+        """По ай-ди"""
+        data_list = self.to_list()
+        try:
+            for i in data_list:
+                if type(i) is not dict:
+                    pass
+                if i['id'] == input_id:
+                    return i
+        except TypeError:
+            return 'Данные не являются словарем или в словаре нет id.'
