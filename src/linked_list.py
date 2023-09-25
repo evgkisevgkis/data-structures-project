@@ -43,3 +43,12 @@ class LinkedList:
 
         ll_string += "None"
         return ll_string
+
+    def to_list(self):
+        """Вывод данных списка списком"""
+        data_list = []
+        cursor = self.head
+        while cursor:
+            data_list.append(cursor.data)
+            cursor = cursor.next_node
+        return data_list
