@@ -28,6 +28,13 @@ class TestLinkedList(unittest.TestCase):
         test.insert_at_end(1)
         self.assertIsInstance(test, LinkedList)
 
+    def test_to_list(self):
+        test = LinkedList()
+        test.insert_beginning(1)
+        test.insert_at_end(1)
+        test = test.to_list()
+        self.assertEqual(type(test), list)
+
 
 if __name__ == '__main__':
     unittest.main()
